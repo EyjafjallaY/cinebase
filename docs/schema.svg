@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="890" viewBox="0 0 1280 890" role="img" aria-labelledby="title description">
+<title id="title">CineBase relationship overview</title>
+<desc id="description">Eleven tables and twelve foreign-key relationships. Arrows point from referencing tables to referenced tables.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 Z" fill="#64748b"/></marker></defs>
+<rect width="1280" height="890" fill="#f8fafc"/>
+<g font-family="Segoe UI,Arial,sans-serif">
+<text x="40" y="43" font-size="26" font-weight="700" fill="#0f172a">CineBase — relationship overview</text>
+<text x="40" y="73" font-size="15" fill="#475569">Arrows point from the FK holder to the referenced table. PK = primary key; FK = foreign key.</text>
+<path d="M310 145 H260" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M750 288 H1140 V210" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M105 400 V210" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M160 510 V550 H555 V365" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M365 400 V235 H195 V210" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M505 400 V330 H530" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M775 445 H760 V330 H750" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M885 400 V210" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1065 400 V350 H750" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M1140 510 V640" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M105 640 H20 V220 H75 V210" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<path d="M260 690 H640 V365" fill="none" stroke="#64748b" stroke-width="2" stroke-linejoin="round" marker-end="url(#arrow)"/>
+<rect x="40" y="100" width="220" height="110" rx="9" fill="#eff6ff" stroke="#94a3b8"/>
+<text x="54" y="129" font-size="18" font-weight="700" fill="#0f172a">users</text>
+<text x="54" y="154" font-size="14" fill="#334155">PK user_id</text>
+<text x="54" y="174" font-size="14" fill="#334155">UNIQUE username, email</text>
+<rect x="310" y="100" width="220" height="110" rx="9" fill="#eff6ff" stroke="#94a3b8"/>
+<text x="324" y="129" font-size="18" font-weight="700" fill="#0f172a">profiles</text>
+<text x="324" y="154" font-size="14" fill="#334155">PK profile_id</text>
+<text x="324" y="174" font-size="14" fill="#334155">FK user_id (UNIQUE)</text>
+<rect x="1030" y="100" width="220" height="110" rx="9" fill="#fffbeb" stroke="#94a3b8"/>
+<text x="1044" y="129" font-size="18" font-weight="700" fill="#0f172a">directors</text>
+<text x="1044" y="154" font-size="14" fill="#334155">PK director_id</text>
+<rect x="775" y="100" width="220" height="110" rx="9" fill="#fffbeb" stroke="#94a3b8"/>
+<text x="789" y="129" font-size="18" font-weight="700" fill="#0f172a">genres</text>
+<text x="789" y="154" font-size="14" fill="#334155">PK genre_id</text>
+<text x="789" y="174" font-size="14" fill="#334155">UNIQUE genre_name</text>
+<rect x="530" y="255" width="220" height="110" rx="9" fill="#fffbeb" stroke="#94a3b8"/>
+<text x="544" y="284" font-size="18" font-weight="700" fill="#0f172a">movies</text>
+<text x="544" y="309" font-size="14" fill="#334155">PK movie_id</text>
+<text x="544" y="329" font-size="14" fill="#334155">FK director_id</text>
+<rect x="40" y="400" width="220" height="110" rx="9" fill="#eff6ff" stroke="#94a3b8"/>
+<text x="54" y="429" font-size="18" font-weight="700" fill="#0f172a">ratings</text>
+<text x="54" y="454" font-size="14" fill="#334155">PK rating_id</text>
+<text x="54" y="474" font-size="14" fill="#334155">FK user_id, movie_id</text>
+<text x="54" y="494" font-size="14" fill="#334155">score 1-10</text>
+<rect x="310" y="400" width="220" height="110" rx="9" fill="#eff6ff" stroke="#94a3b8"/>
+<text x="324" y="429" font-size="18" font-weight="700" fill="#0f172a">reviews</text>
+<text x="324" y="454" font-size="14" fill="#334155">PK review_id</text>
+<text x="324" y="474" font-size="14" fill="#334155">FK user_id, movie_id</text>
+<rect x="775" y="400" width="220" height="110" rx="9" fill="#fffbeb" stroke="#94a3b8"/>
+<text x="789" y="429" font-size="18" font-weight="700" fill="#0f172a">movie_genres</text>
+<text x="789" y="454" font-size="14" fill="#334155">PK/FK movie_id, genre_id</text>
+<rect x="1030" y="400" width="220" height="110" rx="9" fill="#fffbeb" stroke="#94a3b8"/>
+<text x="1044" y="429" font-size="18" font-weight="700" fill="#0f172a">movie_actors</text>
+<text x="1044" y="454" font-size="14" fill="#334155">PK/FK movie_id, actor_id</text>
+<rect x="1030" y="640" width="220" height="110" rx="9" fill="#fffbeb" stroke="#94a3b8"/>
+<text x="1044" y="669" font-size="18" font-weight="700" fill="#0f172a">actors</text>
+<text x="1044" y="694" font-size="14" fill="#334155">PK actor_id</text>
+<rect x="40" y="640" width="220" height="110" rx="9" fill="#eff6ff" stroke="#94a3b8"/>
+<text x="54" y="669" font-size="18" font-weight="700" fill="#0f172a">watchlist</text>
+<text x="54" y="694" font-size="14" fill="#334155">PK/FK user_id, movie_id</text>
+<text x="40" y="803" font-size="16" font-weight="600" fill="#0f172a">Mandatory participation at transaction completion</text>
+<text x="40" y="831" font-size="15" fill="#475569">Every user has exactly one profile. Every movie has at least one genre.</text>
+<text x="40" y="859" font-size="15" fill="#475569">See design.md for cardinalities, deletion behavior, and deferred-trigger limitations.</text>
+</g></svg>
